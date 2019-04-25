@@ -6,11 +6,11 @@ version = "0.0.9"
 [[buildpacks.order]]
 group = [
   { id = "io.buildpacks.nodejs", version = "latest" },
-  { id = "io.buildpacks.react", version = "latest" }
+  { id = "io.buildpacks.static", version = "latest" }
 ]
 
 [[buildpacks]]
 id = "io.buildpacks.static"
 name = "Static Buildpack"
 version = "0.0.9"
-path = "react-buildpack"
+path = "static-buildpack"
