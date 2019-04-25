@@ -1,0 +1,7 @@
+# this is a sample buildpack.toml for a ficticious Lua buildpack
+# it does not define any groups, and it has it's own bin/ at the root
+
+[[buildpacks]]
+id = "io.buildpacks.lua"
+name = "Lua Buildpack"
+version = "0.0.1"

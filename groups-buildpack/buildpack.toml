@@ -1,0 +1,16 @@
+[[buildpacks]]
+id = "io.buildpacks.ruby"
+name = "Ruby Buildpack"
+version = "0.0.9"
+
+[[buildpacks.order]]
+group = [
+  { id = "io.buildpacks.nodejs", version = "latest", optional = true },
+  { id = "io.buildpacks.mri", version = "latest" }
+]
+
+[[buildpacks.order]]
+group = [
+  { id = "io.buildpacks.python", version = "latest" },
+  { id = "io.buildpacks.mri", version = "latest" }
+]

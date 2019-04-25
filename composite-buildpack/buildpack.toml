@@ -1,0 +1,24 @@
+[[buildpacks]]
+id = "io.buildpacks.nodejs"
+name = "Node.js Buildpack"
+version = "0.0.9"
+groups = [
+   { id = "io.buildpacks.node", version = "0.0.5" },
+   { id = "io.buildpacks.npm", version = "0.0.7" },
+]
+
+[[buildpacks]]
+id = "io.buildpacks.npm"
+name = "NPM Buildpack"
+version = "0.0.7"
+path = "./npm-cnb/"
+[buildpacks.metadata]
+# ...
+
+[[buildpacks]]
+id = "io.buildpacks.node"
+name = "Node Engine Buildpack"
+version = "0.0.5"
+path = "./node-cnb/"
+[buildpacks.metadata]
+# ...
