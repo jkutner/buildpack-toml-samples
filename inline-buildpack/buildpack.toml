@@ -1,11 +1,16 @@
 [[buildpacks]]
 id = "io.buildpacks.react"
-name = "React Buildpack"
+name = "React App Buildpack"
 version = "0.0.9"
-path = "react-buildpack"
 
 [[buildpacks.order]]
 group = [
   { id = "io.buildpacks.nodejs", version = "latest" },
   { id = "io.buildpacks.react", version = "latest" }
 ]
+
+[[buildpacks]]
+id = "io.buildpacks.static"
+name = "Static Buildpack"
+version = "0.0.9"
+path = "react-buildpack"
