@@ -1,24 +1,18 @@
 [[buildpacks]]
 id = "io.buildpacks.java"
-name = "Node.js Buildpack"
+name = "Java Buildpack"
 version = "0.0.9"
-groups = [
-   { id = "io.buildpacks.node", version = "0.0.5" },
-   { id = "io.buildpacks.npm", version = "0.0.7" },
+
+[[buildpacks.order]]
+group = [
+  { id = "io.buildpacks.jvm", version = "latest" },
+  { id = "io.buildpacks.maven", version = "latest" },
+  { id = "io.buildpacks.tomcat", version = "latest", optional = true }
 ]
 
-[[buildpacks]]
-id = "io.buildpacks.npm"
-name = "NPM Buildpack"
-version = "0.0.7"
-path = "./npm-cnb/"
-[buildpacks.metadata]
-# ...
-
-[[buildpacks]]
-id = "io.buildpacks.node"
-name = "Node Engine Buildpack"
-version = "0.0.5"
-path = "./node-cnb/"
-[buildpacks.metadata]
-# ...
+[[buildpacks.order]]
+group = [
+  { id = "io.buildpacks.jvm", version = "latest" },
+  { id = "io.buildpacks.gradle", version = "latest" },
+  { id = "io.buildpacks.tomcat", version = "latest", optional = true }
+]
